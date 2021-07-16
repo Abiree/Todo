@@ -1,0 +1,27 @@
+
+<div id="container">
+  <div id="page">
+    <h1 id ="header">To do List</h1><span id="counter"></span>
+
+
+<ul id="sortable">
+  <% @lists.each do |list| %>
+    <li>
+      <%= link_to list.title, to_do_list_path(list) %>
+      <span class="fa fa-pencil"></span>
+      <span class="fa fa-heart-o"></span>
+      <span class="fa fa-check"></span>
+    </li>
+  <% end %>
+ 
+</ul>
+
+
+<p>Completed Items</p>
+    <ul id="complete"></ul>
+    <div id="newItemButton"><button href="#" id ="showForm"> <%= link_to "New List" , new_to_do_list_path %></button></div>
+    
+   </div><!--.page-->
+</div><!--.container-->
+
+

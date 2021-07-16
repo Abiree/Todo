@@ -1,0 +1,43 @@
+<%= form_with model: list, url:path do |form| %>
+  <div id="centerr">
+    <%= form.label :title ,id:"wid" %><br>
+    <%= form.text_field :title ,id:"itemDescription" %>
+   
+     </div>
+      <div id="centerr" style="flex-direction:column;color:orange">
+    <% list.errors.full_messages_for(:title).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+    </div>
+    
+ 
+
+
+
+  <div id="centerr">
+    <%= form.label :desc , id:"wid" %><br>
+    <%= form.text_field :desc, id:"itemDescription"  %><br>
+    </div>
+     <div id="centerr" style="flex-direction:column;color:orange">
+    <% list.errors.full_messages_for(:desc).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+    </div>
+ 
+
+    <div id="centerr">
+    <%= form.label :Author , id:"wid" %><br>
+    <%= form.text_field :Author, id:"itemDescription" %>
+    </div>
+     <div id="centerr" style="flex-direction:column;color:orange">
+      <% list.errors.full_messages_for(:Author).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+  
+
+  <div id="ce">
+    <input type="submit" name="commit" value=<%=name%> data-disable-with=<%=name%> id="addbutton">
+
+  </div>
+<% end %>

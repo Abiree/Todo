@@ -1,0 +1,18 @@
+<div id="container">
+  <div id="page">
+    
+<h1 id="center"><%= @list.title %></h1>
+
+<p><%= @list.desc %></p>
+<p> By <%=  @list.Author %></p>
+<ul>
+  <li><%= link_to "Edit", edit_to_do_list_path(@list) %></li>
+  <li id="danger"><%= link_to "Destroy" , to_do_list_path(@list),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %></li>
+</ul>
+
+   </div><!--.page-->
+</div><!--.container-->
+
+
